@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +33,7 @@ class Cuadro extends StatelessWidget {
         fontSize: 15,
         decoration: TextDecoration.none,
         fontFamily: "monospace",
-        height: 2);
+        );
 
     return Stack(
       children: [
@@ -56,60 +58,90 @@ class Cuadro extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Nombre:", style: textInfo),
-                  Text("Fino señores", style: textInfo),
-                  Text(
+                  const Text("Nombre:", style: textInfo),
+                  const Text("Fino señores", style: textInfo),
+                  const SizedBox(height: 15.0),
+
+                  const Text(
                     "Email:",
                     style: textInfo,
                   ),
-                  Text("fino@gmail.com", style: textInfo),
-                  Text(
+                  const Text("fino@gmail.com", style: textInfo),
+                  const SizedBox(height: 15.0),
+
+                  const Text(
                     "Localización:",
                     style: textInfo,
                   ),
-                  Text(
+                  const Text(
                     "New York, USA",
                     style: textInfo,
                   ),
-                  Text(
+                  const SizedBox(height: 15.0),
+
+                  const Text(
                     "Lenguajes:",
                     style: textInfo,
                   ),
-                  Text(
+                  const Text(
                     "Fino, español",
                     style: textInfo,
                   ),
-                  Text("Ocupación:", style: textInfo),
-                  Text(
+                  const SizedBox(height: 15.0),
+
+                  const Text("Ocupación:", style: textInfo),
+                  const Text(
                     "Ser fino",
                     style: textInfo,
                   ),
+                  const SizedBox(height: 10.0),
                   Container(
                     width: 370,
                     height: 2,
-                    margin: EdgeInsets.only(top: 10, bottom: 10),
-                    decoration: BoxDecoration(color: Colors.black26),
+                    margin: const EdgeInsets.only(top: 10, bottom: 10),
+                    decoration: const BoxDecoration(color: Colors.black26),
                   ),
-                  Text(
+                  const SizedBox(height: 10.0),
+                  const Text(
                     "Mi familia:",
                     style: textInfo,
                   ),
+                  const SizedBox(height: 15.0),
                   Row(
                     children: [
-                      Container(
-                        child: Text(
-                          "abc",
-                          style: textInfo,
-                        ),
+                      Text(
+                        "abc",
+                        style: textInfo,
                       ),
-                      Container(
-                        child: Text(
-                          " - abc",
-                          style: textInfo,
-                        ),
+                      Text(
+                        " - abc",
+                        style: textInfo,
+                      ),
+                      SizedBox(width: 200.0),
+                      Text(
+                        "abc",
+                        style: textInfo,
+                      ),
+                      Text(
+                        " - abc",
+                        style: textInfo,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15.0),
+                  Row(
+                    children: [
+                      Text(
+                        "abc",
+                        style: textInfo,
+                      ),
+                      Text(
+                        " - abc",
+                        style: textInfo,
                       )
-                    ]
-                  )
+                    ],
+                  ),
+                  
                 ],
               ),
             )),
@@ -119,15 +151,12 @@ class Cuadro extends StatelessWidget {
             child: Transform.rotate(
               angle: 330,
               child: Container(
+                
                 width: 2000,
                 height: 300,
                 decoration: const BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                  Colors.white,
-                  Color.fromRGBO(255, 0, 0, 1),
-                  // colorBotones,
-                  // colorBotones
-                ])),
+                  color: Color.fromARGB(255, 217, 81, 103),
+                ),
               ),
             )),
         Padding(
@@ -237,6 +266,7 @@ class Cuadro extends StatelessWidget {
                         ],
                       ),
                     ),
+                    SizedBox(height: 15.0),
                     Row(
                       children: [
                         Expanded(

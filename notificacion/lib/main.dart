@@ -11,9 +11,10 @@ class CardExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
       home: Scaffold(
-        appBar: AppBar(title: const Text('Cards app'), backgroundColor: Color.fromARGB(255, 25, 147, 247)),
+        appBar: AppBar(
+            title: const Text('Cards app'),
+            backgroundColor: Color.fromARGB(255, 25, 147, 247)),
         body: const CardExample(),
       ),
     );
@@ -27,13 +28,15 @@ class CardExample extends StatelessWidget {
   Widget build(BuildContext context) {
     const styleText = TextStyle(color: Colors.black87);
 
-    return Stack(
-      children: [
-        Container(color: Color.fromARGB(255, 221, 237, 200)),
-
-        Padding(
+    return Stack(children: [
+      Container(color: Color.fromARGB(255, 221, 237, 200)),
+      Padding(
         padding: const EdgeInsets.all(10.0),
         child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          shadowColor: Colors.black87,
+          elevation: 10,
           child: Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: Column(
@@ -49,12 +52,18 @@ class CardExample extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
-                      child: const Text('Aceptar', style: styleText,),
+                      child: const Text(
+                        'Aceptar',
+                        style: styleText,
+                      ),
                       onPressed: () {/* ... */},
                     ),
                     const SizedBox(width: 8),
                     TextButton(
-                      child: const Text('Cancelar', style: styleText,),
+                      child: const Text(
+                        'Cancelar',
+                        style: styleText,
+                      ),
                       onPressed: () {/* ... */},
                     ),
                     const SizedBox(width: 8),
@@ -65,8 +74,6 @@ class CardExample extends StatelessWidget {
           ),
         ),
       ),
-      
-      ]
-    );
+    ]);
   }
 }
