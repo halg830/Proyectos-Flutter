@@ -9,10 +9,10 @@ class FormExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const FormExample(
+        body: FormExample(
           title: '',
         ),
       ),
@@ -61,7 +61,7 @@ class Login extends State<FormExample> {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(50),
                   child: Image.asset(
-                    color: Color.fromARGB(255, 25, 147, 247),
+                    color: const Color.fromARGB(255, 25, 147, 247),
                     "assets/perfil.png",
                     width: 90,
                     height: 90,
